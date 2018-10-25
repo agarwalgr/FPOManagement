@@ -1,0 +1,103 @@
+﻿@page
+@model FPOManagement.Pages.Assets.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Asset</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.AssetType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.AssetType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.Count)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.Count)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.LiveStockAssetType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.LiveStockAssetType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.HouseType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.HouseType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.HouseAssetType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.HouseAssetType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.LandType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.LandType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.DoesOwn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.DoesOwn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.IrrigrationSource)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.IrrigrationSource)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.PumpType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.PumpType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.Acreage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.Acreage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.Zone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.Zone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.SRO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.SRO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.Village)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.Village)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asset.SurveyNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asset.SurveyNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Asset.AssetID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

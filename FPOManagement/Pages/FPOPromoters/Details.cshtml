@@ -1,0 +1,37 @@
+﻿@page
+@model FPOManagement.Pages.FPOPromoters.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FPOPromoter</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FPOPromoter.FPOPromoterType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FPOPromoter.FPOPromoterType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FPOPromoter.BusinessName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FPOPromoter.BusinessName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FPOPromoter.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FPOPromoter.Phone)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.FPOPromoter.BusinessID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

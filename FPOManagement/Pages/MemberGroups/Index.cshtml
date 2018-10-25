@@ -1,0 +1,36 @@
+﻿@page
+@model FPOManagement.Pages.MemberGroups.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MemberGroup[0].GroupName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.MemberGroup) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroupName)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.MemberGroupID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.MemberGroupID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.MemberGroupID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

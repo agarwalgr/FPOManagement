@@ -1,0 +1,68 @@
+﻿@page
+@model FPOManagement.Pages.FPOs.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>FPO</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="FPO.BusinessName" class="control-label"></label>
+                <input asp-for="FPO.BusinessName" class="form-control" />
+                <span asp-validation-for="FPO.BusinessName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FPO.Phone" class="control-label"></label>
+                <input asp-for="FPO.Phone" class="form-control" />
+                <span asp-validation-for="FPO.Phone" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="FPO.FPOType" class="control-label"></label>
+                <select asp-for="FPO.FPOType" asp-items="Html.GetEnumSelectList<FPOManagement.Models.FPOType>()" class="form-control"></select>
+                <span asp-validation-for="FPO.FPOType" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="FPO.DateOfFormation" class="control-label"></label>
+                <input asp-for="FPO.DateOfFormation" class="form-control" />
+                <span asp-validation-for="FPO.DateOfFormation" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="FPO.CompanyRegistrationNumber" class="control-label"></label>
+                <input asp-for="FPO.CompanyRegistrationNumber" class="form-control" />
+                <span asp-validation-for="FPO.CompanyRegistrationNumber" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="FPO.MeetingFrequency" class="control-label"></label>
+                <select asp-for="FPO.MeetingFrequency" asp-items="Html.GetEnumSelectList<FPOManagement.Models.MeetingFrequency>()" class="form-control"></select>
+                <span asp-validation-for="FPO.MeetingFrequency" class="text-danger"></span>
+            </div>
+            
+           
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

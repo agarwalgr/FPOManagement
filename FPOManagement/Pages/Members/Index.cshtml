@@ -1,0 +1,210 @@
+﻿@page
+@model FPOManagement.Pages.Members.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].MemberCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].ShareCertificateNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].FatherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].HasLifeInsurance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].HasHealthInsurance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].HasMicroPension)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].DateOfJoining)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].IsBOD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].MemberOfAnotherGroup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].PrimaryOccupation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].SecondaryOccupation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].Caste)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].Religion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].AadharNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].VoterIdNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].MNREGACardNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].MainIncome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].SecondaryIncome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].IsMarried)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].IsDifferentlyAbled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].DoesMigrate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].DoesFamilyMigrate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].TotalHouseholdMembers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].FPO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].MemberGroup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Member[0].Photo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Member) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MemberCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShareCertificateNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasLifeInsurance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasHealthInsurance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HasMicroPension)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfJoining)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsBOD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MemberOfAnotherGroup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrimaryOccupation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryOccupation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Caste)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Religion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AadharNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VoterIdNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MNREGACardNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MainIncome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondaryIncome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsMarried)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDifferentlyAbled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoesMigrate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoesFamilyMigrate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalHouseholdMembers)
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.FPO.Discriminator)*@
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MemberGroup.MemberGroupID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Photo)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

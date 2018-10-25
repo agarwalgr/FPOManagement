@@ -1,0 +1,52 @@
+﻿@page
+@model FPOManagement.Pages.BankAccounts.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BankAccount</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BankAccount.BankName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankAccount.BankName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BankAccount.BankBranch)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankAccount.BankBranch)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BankAccount.AccountNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankAccount.AccountNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BankAccount.IFSCCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankAccount.IFSCCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BankAccount.DateOfOpening)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankAccount.DateOfOpening)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="BankAccount.BankAccountID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

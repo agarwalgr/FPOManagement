@@ -1,0 +1,102 @@
+﻿@page
+@model FPOManagement.Pages.Assets.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Asset</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Asset.AssetID" />
+            <div class="form-group">
+                <label asp-for="Asset.AssetType" class="control-label"></label>
+                <select asp-for="Asset.AssetType" class="form-control"></select>
+                <span asp-validation-for="Asset.AssetType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.Count" class="control-label"></label>
+                <input asp-for="Asset.Count" class="form-control" />
+                <span asp-validation-for="Asset.Count" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.LiveStockAssetType" class="control-label"></label>
+                <select asp-for="Asset.LiveStockAssetType" class="form-control"></select>
+                <span asp-validation-for="Asset.LiveStockAssetType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.HouseType" class="control-label"></label>
+                <select asp-for="Asset.HouseType" class="form-control"></select>
+                <span asp-validation-for="Asset.HouseType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.HouseAssetType" class="control-label"></label>
+                <select asp-for="Asset.HouseAssetType" class="form-control"></select>
+                <span asp-validation-for="Asset.HouseAssetType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.LandType" class="control-label"></label>
+                <select asp-for="Asset.LandType" class="form-control"></select>
+                <span asp-validation-for="Asset.LandType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Asset.DoesOwn" /> @Html.DisplayNameFor(model => model.Asset.DoesOwn)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.IrrigrationSource" class="control-label"></label>
+                <select asp-for="Asset.IrrigrationSource" class="form-control"></select>
+                <span asp-validation-for="Asset.IrrigrationSource" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.PumpType" class="control-label"></label>
+                <input asp-for="Asset.PumpType" class="form-control" />
+                <span asp-validation-for="Asset.PumpType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.Acreage" class="control-label"></label>
+                <input asp-for="Asset.Acreage" class="form-control" />
+                <span asp-validation-for="Asset.Acreage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.Zone" class="control-label"></label>
+                <input asp-for="Asset.Zone" class="form-control" />
+                <span asp-validation-for="Asset.Zone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.SRO" class="control-label"></label>
+                <input asp-for="Asset.SRO" class="form-control" />
+                <span asp-validation-for="Asset.SRO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.Village" class="control-label"></label>
+                <input asp-for="Asset.Village" class="form-control" />
+                <span asp-validation-for="Asset.Village" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Asset.SurveyNumber" class="control-label"></label>
+                <input asp-for="Asset.SurveyNumber" class="form-control" />
+                <span asp-validation-for="Asset.SurveyNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

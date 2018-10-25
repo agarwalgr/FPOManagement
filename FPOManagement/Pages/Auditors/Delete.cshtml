@@ -1,0 +1,40 @@
+﻿@page
+@model FPOManagement.Pages.Auditors.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Auditor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Auditor.AuditorName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Auditor.AuditorName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Auditor.BusinessName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Auditor.BusinessName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Auditor.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Auditor.Phone)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Auditor.BusinessID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

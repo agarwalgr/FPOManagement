@@ -1,0 +1,114 @@
+﻿@page
+@model FPOManagement.Pages.Assets.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].AssetType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].Count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].LiveStockAssetType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].HouseType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].HouseAssetType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].LandType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].DoesOwn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].IrrigrationSource)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].PumpType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].Acreage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].Zone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].SRO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].Village)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset[0].SurveyNumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Asset) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssetType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Count)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LiveStockAssetType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HouseType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HouseAssetType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LandType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoesOwn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IrrigrationSource)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PumpType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acreage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SRO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Village)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SurveyNumber)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.AssetID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.AssetID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.AssetID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

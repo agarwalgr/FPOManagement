@@ -1,0 +1,202 @@
+﻿@page
+@model FPOManagement.Pages.Members.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Member</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.MemberCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.MemberCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.DateOfBirth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.DateOfBirth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.ShareCertificateNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.ShareCertificateNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.FatherName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.FatherName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.HasLifeInsurance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.HasLifeInsurance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.HasHealthInsurance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.HasHealthInsurance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.HasMicroPension)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.HasMicroPension)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.DateOfJoining)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.DateOfJoining)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.IsBOD)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.IsBOD)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.MemberOfAnotherGroup)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.MemberOfAnotherGroup)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.PrimaryOccupation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.PrimaryOccupation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.SecondaryOccupation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.SecondaryOccupation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.Caste)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.Caste)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.Religion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.Religion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.AadharNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.AadharNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.VoterIdNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.VoterIdNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.MNREGACardNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.MNREGACardNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.MainIncome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.MainIncome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.SecondaryIncome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.SecondaryIncome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.IsMarried)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.IsMarried)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.IsDifferentlyAbled)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.IsDifferentlyAbled)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.DoesMigrate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.DoesMigrate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.DoesFamilyMigrate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.DoesFamilyMigrate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.TotalHouseholdMembers)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.TotalHouseholdMembers)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.FPO)
+        </dt>
+        <dd>
+            @*@Html.DisplayFor(model => model.Member.FPO.Discriminator)*@
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.MemberGroup)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.MemberGroup.MemberGroupID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.Gender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.Gender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.Phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.Photo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Member.Photo)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Member.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

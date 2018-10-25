@@ -1,0 +1,25 @@
+﻿@page
+@model FPOManagement.Pages.MemberGroups.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MemberGroup</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MemberGroup.GroupName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MemberGroup.GroupName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.MemberGroup.MemberGroupID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

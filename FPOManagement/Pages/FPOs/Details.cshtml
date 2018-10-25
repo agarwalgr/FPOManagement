@@ -1,0 +1,68 @@
+﻿@page
+@model FPOManagement.Pages.FPOs.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FPO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FPO.BusinessName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FPO.BusinessName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FPO.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FPO.Phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FPO.FPOType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FPO.FPOType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FPO.DateOfFormation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FPO.DateOfFormation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FPO.CompanyRegistrationNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FPO.CompanyRegistrationNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FPO.MeetingFrequency)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FPO.MeetingFrequency)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FPO.Auditor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FPO.Auditor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FPO.FPOPromoter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FPO.FPOPromoter)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.FPO.BusinessID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

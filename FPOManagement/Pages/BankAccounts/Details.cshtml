@@ -1,0 +1,49 @@
+﻿@page
+@model FPOManagement.Pages.BankAccounts.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BankAccount</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BankAccount.BankName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankAccount.BankName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BankAccount.BankBranch)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankAccount.BankBranch)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BankAccount.AccountNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankAccount.AccountNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BankAccount.IFSCCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankAccount.IFSCCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BankAccount.DateOfOpening)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BankAccount.DateOfOpening)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.BankAccount.BankAccountID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,0 +1,198 @@
+﻿@page
+@model FPOManagement.Pages.Members.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Member</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Member.MemberCode" class="control-label"></label>
+                <input asp-for="Member.MemberCode" class="form-control" />
+                <span asp-validation-for="Member.MemberCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.DateOfBirth" class="control-label"></label>
+                <input asp-for="Member.DateOfBirth" class="form-control" />
+                <span asp-validation-for="Member.DateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.ShareCertificateNumber" class="control-label"></label>
+                <input asp-for="Member.ShareCertificateNumber" class="form-control" />
+                <span asp-validation-for="Member.ShareCertificateNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.FatherName" class="control-label"></label>
+                <input asp-for="Member.FatherName" class="form-control" />
+                <span asp-validation-for="Member.FatherName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Member.HasLifeInsurance" /> @Html.DisplayNameFor(model => model.Member.HasLifeInsurance)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Member.HasHealthInsurance" /> @Html.DisplayNameFor(model => model.Member.HasHealthInsurance)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Member.HasMicroPension" /> @Html.DisplayNameFor(model => model.Member.HasMicroPension)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.DateOfJoining" class="control-label"></label>
+                <input asp-for="Member.DateOfJoining" class="form-control" />
+                <span asp-validation-for="Member.DateOfJoining" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Member.IsBOD" /> @Html.DisplayNameFor(model => model.Member.IsBOD)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Member.MemberOfAnotherGroup" /> @Html.DisplayNameFor(model => model.Member.MemberOfAnotherGroup)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.PrimaryOccupation" class="control-label"></label>
+                <select asp-for="Member.PrimaryOccupation" class="form-control"></select>
+                <span asp-validation-for="Member.PrimaryOccupation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.SecondaryOccupation" class="control-label"></label>
+                <input asp-for="Member.SecondaryOccupation" class="form-control" />
+                <span asp-validation-for="Member.SecondaryOccupation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.Caste" class="control-label"></label>
+                <input asp-for="Member.Caste" class="form-control" />
+                <span asp-validation-for="Member.Caste" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.Religion" class="control-label"></label>
+                <select asp-for="Member.Religion" class="form-control"></select>
+                <span asp-validation-for="Member.Religion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.AadharNumber" class="control-label"></label>
+                <input asp-for="Member.AadharNumber" class="form-control" />
+                <span asp-validation-for="Member.AadharNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.VoterIdNumber" class="control-label"></label>
+                <input asp-for="Member.VoterIdNumber" class="form-control" />
+                <span asp-validation-for="Member.VoterIdNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.MNREGACardNumber" class="control-label"></label>
+                <input asp-for="Member.MNREGACardNumber" class="form-control" />
+                <span asp-validation-for="Member.MNREGACardNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.MainIncome" class="control-label"></label>
+                <input asp-for="Member.MainIncome" class="form-control" />
+                <span asp-validation-for="Member.MainIncome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.SecondaryIncome" class="control-label"></label>
+                <input asp-for="Member.SecondaryIncome" class="form-control" />
+                <span asp-validation-for="Member.SecondaryIncome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Member.IsMarried" /> @Html.DisplayNameFor(model => model.Member.IsMarried)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Member.IsDifferentlyAbled" /> @Html.DisplayNameFor(model => model.Member.IsDifferentlyAbled)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Member.DoesMigrate" /> @Html.DisplayNameFor(model => model.Member.DoesMigrate)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Member.DoesFamilyMigrate" /> @Html.DisplayNameFor(model => model.Member.DoesFamilyMigrate)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.TotalHouseholdMembers" class="control-label"></label>
+                <input asp-for="Member.TotalHouseholdMembers" class="form-control" />
+                <span asp-validation-for="Member.TotalHouseholdMembers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.FPOID" class="control-label"></label>
+                <select asp-for="Member.FPOID" class="form-control" asp-items="ViewBag.FPOID"></select>
+                <span asp-validation-for="Member.FPOID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.MemberGroupID" class="control-label"></label>
+                <select asp-for="Member.MemberGroupID" class="form-control" asp-items="ViewBag.MemberGroupID"></select>
+                <span asp-validation-for="Member.MemberGroupID" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Member.ID" />
+            <div class="form-group">
+                <label asp-for="Member.Name" class="control-label"></label>
+                <input asp-for="Member.Name" class="form-control" />
+                <span asp-validation-for="Member.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.Gender" class="control-label"></label>
+                <select asp-for="Member.Gender" class="form-control"></select>
+                <span asp-validation-for="Member.Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.Phone" class="control-label"></label>
+                <input asp-for="Member.Phone" class="form-control" />
+                <span asp-validation-for="Member.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Member.Photo" class="control-label"></label>
+                <input asp-for="Member.Photo" class="form-control" />
+                <span asp-validation-for="Member.Photo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
